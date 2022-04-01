@@ -1,15 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - Prints the alphabet without q and e.
- *
- * Return: Always 0 (Success)
- */
+  * main - Prints the numbers since 0 to 9
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 48 ; i < 58 ; i++)
-		putchar(i);
+	for (n = '0'; n <= '9'; n++)
+	{
+		putchar(n);
+	}
+
 	putchar('\n');
+
 	return (0);
 }
+

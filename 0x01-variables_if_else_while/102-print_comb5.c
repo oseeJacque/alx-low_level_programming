@@ -1,49 +1,47 @@
-
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 00 to 99.
- *
- * Return: Always 0 (Success)
- */
+  * main - Prints 3 combination of numbers
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-int i, e, g, h, op1, op2;
+	int c, i, k, j;
 
-i = e = g = h = 48;
-while (h < 58)
-{
-	g = 48;
-	while (g < 58)
+	for (c = 48; c <= 57; c++)
 	{
-		e = 48;
-		while (e < 58)
+		for (i = 48; i <= 57; i++)
 		{
-			i = 48;
-			while (i < 58)
+			for (k = 48; k <= 57; k++)
 			{
-				op1 = (h * 10) + g;
-				op2 = (e * 10) + i;
-				if (op1 < op2)
+				for (j = 48; j <= 57; j++)
 				{
-					putchar(h);
-					putchar(g);
-					putchar(' ');
-					putchar(e);
-					putchar(i);
-					if (h == 57 && g == 56 && e == 57 && i == 57)
-						break;
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					{
+						putchar(c);
+						putchar(i);
+						putchar(' ');
+						putchar(k);
+						putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
+					{
+					break;
+					}
+					else
+					{
 					putchar(',');
 					putchar(' ');
+					}
+					}
 				}
-				i++;
 			}
-			e++;
 		}
-		g++;
 	}
-	h++;
+
+	putchar('\n');
+
+	return (0);
 }
-putchar('\n');
-return (0);
-}
+

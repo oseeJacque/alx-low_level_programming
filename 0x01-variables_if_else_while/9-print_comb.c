@@ -1,22 +1,27 @@
 #include <stdio.h>
+
 /**
- * main - Prints the alphabet without q and e.
- *
- * Return: Always 0 (Success)
- */
+  * main - Prints a serie of numbers with commas
+  *
+  * Return: Always (Success);
+  */
 int main(void)
 {
-	int i;
+	int c;
 
-	for (i = 48; i < 58; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(i);
-		if (i != 57)
+		putchar(c);
+
+		if (c != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
+

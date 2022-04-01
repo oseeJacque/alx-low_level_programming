@@ -1,16 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - Prints the alphabet without q and e.
- *
- * Return: Always 0 (Success)
- */
+  * main - Prints the alphabet at reverse
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char c;
 
-	for (i = 25; i >= 0; i--)
-		putchar(alp[i]);
+	for (c = 'z'; c >= 'a'; c--)
+	{
+		putchar(c);
+	}
+
 	putchar('\n');
+
 	return (0);
 }
+
